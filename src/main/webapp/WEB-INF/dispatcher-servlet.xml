@@ -43,7 +43,7 @@
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver"
 		name="viewResolver">
 		<property name="prefix">
-			<value>/WEB-INF/jsp/</value>
+			<value>/WEB-INF/jsps/</value>
 		</property>
 		<property name="suffix">
 			<value>.jsp</value>
