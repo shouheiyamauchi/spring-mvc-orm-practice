@@ -2,6 +2,7 @@ package com.shouhei.spring.springmvcorm.user.services.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.shouhei.spring.springmvcorm.user.dao.UserDao;
 import com.shouhei.spring.springmvcorm.user.entity.User;
@@ -21,6 +22,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
+	@Transactional
 	public int save(User user) {
 		return dao.create(user);
 	}
