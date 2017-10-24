@@ -15,5 +15,7 @@
 			<input type="submit" name="register" />
 		</pre>
 	</form>
+	
+	<br/>${result}
 </body>
 </html>
