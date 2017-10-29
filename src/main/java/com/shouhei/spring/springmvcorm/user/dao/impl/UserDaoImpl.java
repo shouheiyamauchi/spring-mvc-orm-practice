@@ -34,4 +34,10 @@ public class UserDaoImpl implements UserDao {
 		return hibernateTemplate.loadAll(User.class);
 	}
 
+	@Override
+	public User findUser(Integer id) {
+		User user = hibernateTemplate.get(User.class, id);
+		return user;
+	}
+
 }
