@@ -4,9 +4,9 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class User {
+public class User implements Comparable<User> {
 	@Id
-	private int id;
+	private Integer id;
 	private String name;
 	private String email;
 
@@ -37,6 +37,11 @@ public class User {
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", name=" + name + ", email=" + email + "]";
+	}
+
+	@Override
+	public int compareTo(User user) {
+		return this.id.compareTo(user.id);
 	}
 
 }
